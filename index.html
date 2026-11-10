@@ -3,32 +3,235 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Andres Murcia's data analytics portfolio. Commercial reporting, marketing measurement, Salesforce, Excel forecasting, and SQL and Python training.">
-<title>Andres Murcia | Data Analytics Portfolio</title>
+<meta name="description" content="Andres Murcia’s commercial and data analytics portfolio. Four TripleTen case studies in Excel, SQL and Python.">
+<title>Andres Murcia | Commercial &amp; Data Analytics</title>
 <style>
-:root{color-scheme:light;--ink:#182720;--muted:#4f6157;--paper:#f6f5ef;--line:#d5dcd2;--green:#164d39;--lime:#daf49c;--white:#fff;--radius:22px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}a{color:inherit}a:hover{text-decoration-thickness:2px}a:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #bb672c;outline-offset:4px}
-.shell{width:min(1100px,calc(100% - 3rem));margin-inline:auto}.eyebrow,.kicker{font-size:.74rem;font-weight:750;letter-spacing:.13em;text-transform:uppercase}.skip{position:absolute;left:1rem;top:-5rem;background:white;padding:.5rem;z-index:2}.skip:focus{top:1rem}
-header .shell{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:1.25rem}.brand{text-decoration:none;font-weight:800}.brand span{display:inline-grid;place-items:center;background:var(--green);color:white;border-radius:8px;width:2.3rem;height:2.3rem;font-size:.72rem;margin-right:.55rem}nav{display:flex;flex-wrap:wrap;gap:.4rem 1.35rem}nav a{font-size:.9rem;text-underline-offset:4px}
-.hero{background:#173b2d;color:white;border-radius:28px;padding:clamp(2rem,6vw,5.25rem);display:grid;grid-template-columns:minmax(0,1fr) minmax(205px,.4fr);align-items:end;gap:2rem}.hero .eyebrow{color:var(--lime)}h1,h2,h3,p{margin-top:0}h1,h2{font-family:Georgia,serif;font-weight:500;line-height:1.05;letter-spacing:-.035em}h1{font-size:clamp(2.75rem,6vw,5.35rem);margin:.8rem 0 1.25rem;max-width:13ch}h2{font-size:clamp(2.05rem,4.3vw,3.4rem);margin:.45rem 0 1rem}h3{line-height:1.2}.hero p{max-width:57ch;color:#e0ede5}.button{display:inline-block;padding:.7rem 1rem;border-radius:8px;background:var(--lime);color:#203424;font-size:.92rem;font-weight:750;text-decoration:none}.button:hover{background:#ecffcc}.hero aside{border-top:1px solid #628075;padding-top:1rem}.hero aside ul{list-style:none;padding:0;margin:0}.hero aside li{border-bottom:1px solid #628075;padding:.55rem 0;color:#f2f7f4;font-size:.93rem}
-section{margin-block:clamp(3rem,7vw,5.5rem);scroll-margin-top:1rem}.kicker{color:var(--green);margin:0}.intro{max-width:71ch;color:var(--muted)}.panel{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.15rem,3.5vw,2rem)}.panel-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;margin-bottom:1.1rem}.panel-head h3{margin:0;font-size:1.3rem}.badge{background:#ecf2e7;color:var(--green);border-radius:20px;padding:.3rem .7rem;font-size:.72rem;font-weight:800}.filters{display:flex;flex-wrap:wrap;gap:.85rem;margin-bottom:1rem}.filters label{display:grid;gap:.2rem;font-size:.8rem;font-weight:700}.filters select{font:inherit;font-size:.95rem;background:#fff;color:var(--ink);border:1px solid #819486;border-radius:7px;padding:.4rem .65rem;min-width:145px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}.metric{background:#f1f5ed;border-radius:12px;padding:.85rem 1rem}.metric span{display:block;font-size:.79rem;font-weight:700;color:#3d5547}.metric strong{font-size:clamp(1.4rem,3.3vw,2.15rem);font-variant-numeric:tabular-nums}.chart{margin-block:1.4rem}.chart h4{margin:0 0 .6rem}.bars{display:grid;gap:.6rem}.row{display:grid;grid-template-columns:5.5rem minmax(0,1fr) 3.65rem;gap:.6rem;align-items:center;font-size:.88rem}.track{height:16px;border-radius:4px;background:#edf2ea;overflow:hidden}.bar{display:block;height:100%;background:#34765b;border-radius:4px}.row strong{text-align:right;font-variant-numeric:tabular-nums}.muted{color:var(--muted);font-size:.88rem}.insight{border-left:3px solid #60945f;padding-left:1rem;margin-bottom:1.25rem}.insight p{margin:0}.insight strong{display:block;margin-bottom:.3rem}
-details{border-top:1px solid var(--line);padding:.85rem 0}summary{cursor:pointer;font-weight:750}details p{margin:.75rem 0}.code{overflow:auto;background:#1a3027;color:#f5fbf6;border-radius:10px;padding:1rem;font: .84rem/1.55 ui-monospace,Consolas,monospace}button{background:#fff;color:var(--green);border:1px solid #819486;border-radius:7px;padding:.5rem .7rem;font:inherit;font-weight:700;cursor:pointer}button:hover{background:#ecf2e7}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.card{border-top:3px solid #527a64}.card h3{font-size:1.3rem;margin:.65rem 0}.card p:last-child{margin-bottom:0}.tags{color:var(--green);font-size:.82rem;font-weight:750}.about{border-top:1px solid var(--line);padding-top:2rem}.about p{max-width:70ch}.footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1rem 0 2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.87rem}
-@media(max-width:760px){.hero{grid-template-columns:1fr}.cards{grid-template-columns:1fr}}@media(max-width:460px){.shell{width:calc(100% - 1.5rem)}header .shell{align-items:flex-start;flex-direction:column}.hero{padding:1.4rem}.metric{padding:.5rem}.metric span{font-size:.72rem}.row{grid-template-columns:4.5rem minmax(0,1fr) 3.35rem;gap:.35rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root {
+  --paper:#f5f7f3;
+  --white:#fff;
+  --ink:#192e27;
+  --muted:#4c6259;
+  --green:#145640;
+  --line:#d6dfd8;
+  --radius:15px;
+  color-scheme:light;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {margin:0;background:var(--paper);color:var(--ink);font:1rem/1.65 system-ui,sans-serif}
+a {color:var(--green);text-underline-offset:.22em}
+a:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible {outline:3px solid #a95422;outline-offset:4px}
+.skip {position:absolute;left:1rem;top:-6rem;background:white;padding:.6rem;z-index:3}
+.skip:focus {top:1rem}
+.layout {width:min(1120px,calc(100% - 3rem));margin:0 auto;display:grid;grid-template-columns:minmax(205px,265px) minmax(0,1fr);gap:clamp(2rem,6vw,5rem);align-items:start}
+.profile {position:sticky;top:0;padding:clamp(1.7rem,5vw,4rem) 0 1rem;max-height:100vh;overflow-y:auto}
+.monogram {display:grid;place-items:center;background:var(--green);color:white;border-radius:16px;width:3.6rem;height:3.6rem;font:1.4rem Georgia,serif;margin-bottom:1.35rem}
+h1,h2,h3,h4,p {margin:0 0 .8rem}
+h1,h2,h3 {font-family:Georgia,serif;font-weight:500;line-height:1.13;letter-spacing:-.027em}
+h1 {font-size:clamp(2rem,3.4vw,3.2rem)}
+h2 {font-size:clamp(2.15rem,4.4vw,3.5rem)}
+h3 {font-size:clamp(1.55rem,3vw,2.25rem)}
+h4 {font-size:1rem}
+.kicker {font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.115em;color:var(--green);margin-bottom:.5rem}
+.location,.intro,.muted,.chart-note {color:var(--muted)}
+.profile-links {display:flex;gap:.95rem;flex-wrap:wrap;margin:1rem 0 1.55rem;font-size:.9rem;font-weight:700}
+nav {display:grid;gap:.46rem;border-top:1px solid var(--line);padding-top:1.1rem}
+nav a {text-decoration:none;width:fit-content;font-weight:650;font-size:.9rem}
+nav a:hover {text-decoration:underline}
+nav ul {display:grid;gap:.27rem;margin:0 0 .45rem;padding:0 0 0 .8rem;border-left:2px solid var(--line);list-style:none}
+nav ul a {font-weight:500;color:var(--muted)}
+main {min-width:0;padding:clamp(1.5rem,5vw,4rem) 0 0}
+section,.project {scroll-margin-top:1.4rem}
+section {margin-bottom:3.65rem}
+.about-intro {border-bottom:1px solid var(--line);padding-bottom:2.2rem}
+.about-intro h2 {max-width:16ch}
+.tools {display:flex;flex-wrap:wrap;gap:.36rem;margin:1rem 0;padding:0;list-style:none}
+.tools li,.badge {background:#e6eee7;color:var(--green);border-radius:6px;padding:.18rem .58rem;font-size:.78rem;font-weight:700}
+.project,.panel {background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.15rem,3.5vw,2rem)}
+.project {margin-top:1.3rem}
+.question {font-weight:680}
+figure {margin:1.2rem 0;background:#f1f6f2;border:1px solid #dae5dc;border-radius:10px;padding:clamp(.8rem,2.5vw,1.2rem)}
+figcaption {font-size:.9rem;font-weight:760;margin-bottom:.65rem}
+.stack {display:grid;grid-template-columns:55.59fr 44.41fr;border-radius:6px;overflow:hidden;margin:.7rem 0 .45rem}
+.stack span {padding:.35rem .2rem;text-align:center;font-weight:750;font-size:.85rem;background:#23664e;color:white}
+.stack span+span {background:#d8e6dc;color:#244639}
+.legend {display:grid;grid-template-columns:55.59fr 44.41fr;text-align:center;gap:.4rem;color:var(--muted);font-size:.78rem}
+.bars {display:grid;gap:.5rem}
+.plot-row,.row {display:grid;align-items:center;grid-template-columns:8.3rem minmax(0,1fr) 3.65rem;gap:.55rem;font-size:.83rem}
+.plot-row strong,.row strong {text-align:right;font-variant-numeric:tabular-nums}
+.track {height:12px;background:#dfeae2;border-radius:4px;overflow:hidden}
+.bar {display:block;height:100%;background:#34765b;border-radius:4px}
+.chart-note {font-size:.82rem;margin:.65rem 0 0}
+.scatter {display:block;width:100%;height:auto;color:var(--ink)}
+details {border-top:1px solid var(--line);padding:.7rem 0}
+summary {cursor:pointer;font-weight:700}
+details p {margin:.6rem 0}
+.source {display:inline-block;margin:.6rem 0 0;font-size:.92rem;font-weight:750}
+.cards {display:grid;gap:.7rem}
+.card h3 {font-size:1.25rem}
+.card p:last-child {margin-bottom:0}
+.tags {color:var(--green);font-size:.83rem;font-weight:650}
+.panel-head {display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
+.panel-head h3 {font-size:1.25rem;margin:0}
+.filters {display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem}
+.filters label {display:grid;gap:.2rem;font-size:.8rem;font-weight:700}
+select,button {font:inherit;color:var(--ink);background:white;border:1px solid #84998b;border-radius:7px;padding:.4rem .55rem}
+button {cursor:pointer}
+.metrics {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem}
+.metric {background:#edf4ee;border-radius:8px;padding:.5rem .65rem}
+.metric span,.metric strong {display:block}
+.metric span {font-size:.76rem;font-weight:700}
+.metric strong {font-size:clamp(1.12rem,3vw,1.55rem)}
+.chart,.insight {margin-block:1rem}
+.row {grid-template-columns:5rem minmax(0,1fr) 3.25rem}
+.insight {border-left:3px solid #70a283;padding-left:.8rem}
+.insight p {margin:0}
+.muted {font-size:.86rem}
+.code {overflow:auto;background:#1a3027;color:#f5fbf6;border-radius:8px;padding:1rem;font:.82rem/1.55 ui-monospace,Consolas,monospace}
+.footer {display:flex;justify-content:space-between;gap:.75rem;flex-wrap:wrap;border-top:1px solid var(--line);padding:1rem 0 2rem;color:var(--muted);font-size:.85rem}
+@media(max-width:780px) {
+  .layout {display:block;width:min(680px,calc(100% - 2rem))}
+  .profile {position:static;max-height:none;border-bottom:1px solid var(--line)}
+  .profile nav {display:flex;flex-wrap:wrap;gap:.3rem 1rem}
+  .profile nav ul {display:none}
+}
+@media(max-width:390px) {
+  .plot-row {grid-template-columns:6.35rem minmax(0,1fr) 3.3rem;gap:.35rem}
+  .metric {padding:.4rem}
+}
+@media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}}
+
 </style>
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
-<header><div class="shell"><a class="brand" href="#top"><span aria-hidden="true">AM</span>Andres Murcia</a><nav aria-label="Main navigation"><a href="#dashboard">Dashboard</a><a href="#experience">Experience</a><a href="#about">About</a></nav></div></header>
-<main id="main" class="shell">
-<div class="hero">
-<div><p class="eyebrow">Data analytics portfolio · Toronto, ON</p><h1>Analytics for commercial decisions</h1><p>I bring a background in commercial operations and marketing to questions about sales performance, demand, and outreach. I’m building on that experience with SQL and Python through TripleTen.</p><a class="button" href="#dashboard">Explore the dashboard ↓</a></div>
-<aside aria-label="Focus areas"><p class="eyebrow">Focus areas</p><ul><li>KPI reporting</li><li>Campaign measurement</li><li>Demand forecasting</li></ul></aside>
-</div>
+<div class="layout">
+<header class="profile">
+<div class="monogram" aria-hidden="true">AM</div>
+<p class="kicker">Commercial &amp; data analytics</p>
+<h1>Andres Murcia</h1>
+<p class="location">Toronto, Ontario</p>
+<div class="profile-links"><a href="https://www.linkedin.com/in/andresmurciavalenciano/">LinkedIn ↗</a><a href="https://github.com/anfemuva">GitHub ↗</a></div>
+<nav aria-label="Portfolio sections">
+<a href="#about">About me</a>
+<a href="#projects">Selected projects</a>
+<ul><li><a href="#walmart">Walmart sales</a></li><li><a href="#financial">Financial performance</a></li><li><a href="#mercadolibre">MercadoLibre funnel</a></li><li><a href="#mobility">Urban mobility</a></li></ul>
+<a href="#experience">Professional experience</a>
+<a href="#dashboard">Interactive demo</a>
+</nav>
+</header>
+<main id="main">
+<section id="about" aria-labelledby="about-title" class="about-intro">
+<p class="kicker">About me</p>
+<h2 id="about-title">I use data to answer commercial questions.</h2>
+<p>My background spans commercial operations, marketing and account development. I’m building on that experience through TripleTen’s Data Analyst Bootcamp, where I use Excel, SQL and Python to study sales, customer behavior and operational performance.</p>
+<p>I start with the decision at hand, check the definitions behind the metrics, and explain what the findings support and what still needs testing.</p>
+<ul class="tools" aria-label="Tools"><li>Excel</li><li>SQL</li><li>Python</li><li>Salesforce</li></ul>
+</section>
 
+<section id="projects" aria-labelledby="projects-title">
+<p class="kicker">Project portfolio</p>
+<h2 id="projects-title">Selected projects</h2>
+<p class="intro">Four academic case studies from my TripleTen analytics training.</p>
+<article class="project" id="walmart" aria-labelledby="walmart-title">
+<p class="kicker">01 / Retail sales</p>
+<h3 id="walmart-title">Walmart Sales Executive Summary</h3>
+<ul class="tools" aria-label="Project tools and methods"><li>Excel</li><li>Pivot tables</li><li>Dashboard</li></ul>
+<p class="question">How concentrated are sales across departments, and where should an inventory team focus its attention?</p>
+<p>I joined weekly sales records with store and department lookup tables, built pivot tables and charts, and added a department selector to the executive dashboard.</p>
+<figure><figcaption>Share of 2012 sales by department group</figcaption><div class="stack" aria-label="Top five departments, 55.59 percent. All other departments, 44.41 percent."><span>55.59%</span><span>44.41%</span></div><div class="legend"><span>Top five departments</span><span>All other departments</span></div></figure>
+<h4>Finding and next step</h4>
+<p>The five largest department groups accounted for 55.59% of 2012 sales under the workbook’s existing grouping. Monitor product availability in those groups first.</p>
+<details><summary>How to interpret the results</summary><p>The size-adjusted metric uses average total store size as its denominator. Validate the area unit and department mapping before making space allocation decisions.</p></details>
+<a class="source" href="https://docs.google.com/spreadsheets/d/19wc_HetWf_7-BTnf-Hdc75pA_4_-LnIc4Z0tvMu5dZ0/edit">Open the sales dashboard <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project" id="financial" aria-labelledby="financial-title">
+<p class="kicker">02 / Commercial finance</p>
+<h3 id="financial-title">Financial Performance Analysis</h3>
+<ul class="tools" aria-label="Project tools and methods"><li>SQL</li><li>Market comparison</li><li>Executive reporting</li></ul>
+<p class="question">How does performance compare across markets when campaign spending is taken into account?</p>
+<p>I used SQL to analyze revenue, costs, gross profit, margin and campaign spending across six markets, then presented the comparison in an executive summary.</p>
+<figure><figcaption>Gross profit ÷ campaign spending · two leading markets</figcaption><div class="bars"><div class="plot-row"><span>United States</span><div class="track"><span class="bar" style="width:75.75%"></span></div><strong>75.75%</strong></div><div class="plot-row"><span>Australia</span><div class="track"><span class="bar" style="width:49.16%"></span></div><strong>49.16%</strong></div></div></figure>
+<h4>Finding and next step</h4>
+<p>The United States led on gross profit relative to campaign spend at 75.75%, followed by Australia at 49.16%. Gross margins varied less across the six markets than this ratio did.</p>
+<details><summary>How to interpret the results</summary><p>The workbook labels this ratio ROI. Its numerator is gross profit before deducting campaign spending, so budget decisions should also consider absolute profit and spend.</p></details>
+<a class="source" href="https://docs.google.com/spreadsheets/d/1NERr0Srwu3Abx--eR5bRIlNa2Zmztrd6oeBy481Glp0/edit">Open the financial summary <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project" id="mercadolibre" aria-labelledby="mercadolibre-title">
+<p class="kicker">03 / Customer behavior</p>
+<h3 id="mercadolibre-title">MercadoLibre Funnel and Retention</h3>
+<ul class="tools" aria-label="Project tools and methods"><li>SQL</li><li>Funnel analysis</li><li>Retention</li></ul>
+<p class="question">Where do customers leave the purchase funnel, and how does activity change after registration?</p>
+<p>I compared unique-user counts across purchase stages in SQL and measured reported retention at days 7, 14, 21 and 28.</p>
+<figure><figcaption>Share of first-visit users at two funnel stages</figcaption><div class="bars"><div class="plot-row"><span>Product selected</span><div class="track"><span class="bar" style="width:76.9%"></span></div><strong>76.9%</strong></div><div class="plot-row"><span>Added to cart</span><div class="track"><span class="bar" style="width:11.01%"></span></div><strong>11.01%</strong></div></div><p class="chart-note">Reported retention moved from <strong>86.7% on day 7</strong> to <strong>2.8% on day 28.</strong></p></figure>
+<h4>Finding and next step</h4>
+<p>Product selection to cart was the largest reported drop, at 65.89 percentage points. Review product-page and shipping information by market, and consider testing retention interventions around days 14–21.</p>
+<details><summary>How to interpret the results</summary><p>Both funnel percentages use first-visit users as the baseline. Follow-up testing would be needed to determine why users leave and whether an intervention helps.</p></details>
+<a class="source" href="https://docs.google.com/spreadsheets/d/1pF4C1_rwP3VsZFwkJXt6H_QG2lglpj4ZHVZszdaNCVE/edit">Open the funnel and retention report <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project" id="mobility" aria-labelledby="mobility-title">
+<p class="kicker">04 / Exploratory analysis</p>
+<h3 id="mobility-title">Urban Mobility and Economic Productivity</h3>
+<ul class="tools" aria-label="Project tools and methods"><li>Python</li><li>pandas</li><li>NumPy</li><li>Seaborn</li><li>Matplotlib</li></ul>
+<p class="question">How do traffic and economic indicators vary across Latin American cities, and which cities warrant further investigation?</p>
+<p>I cleaned and standardized 2024 data from the TomTom Traffic Index and OECD Cities, aggregated traffic records by city and year, and joined records present in both sources.</p>
+<figure><figcaption>GDP per capita and average traffic-jam delay · 15 cities, 2024</figcaption>
+<svg class="scatter" viewBox="0 0 590 258" role="img" aria-labelledby="scatter-title scatter-desc">
+<title id="scatter-title">GDP per capita versus average traffic-jam delay</title>
+<desc id="scatter-desc">Scatterplot of 15 cities. Mexico City has the highest delay. Bogotá and Lima have substantial delays at lower GDP per capita than Mexico City. Santiago has the lowest recorded GDP per capita.</desc>
+<path d="M62 208.0H560" stroke="#c4d4c9"/>
+<text x="54" y="212.0" text-anchor="end" fill="currentColor" font-size="13">0</text>
+<path d="M62 149.3H560" stroke="#c4d4c9"/>
+<text x="54" y="153.3" text-anchor="end" fill="currentColor" font-size="13">1,000</text>
+<path d="M62 90.7H560" stroke="#c4d4c9"/>
+<text x="54" y="94.7" text-anchor="end" fill="currentColor" font-size="13">2,000</text>
+<path d="M62 32.0H560" stroke="#c4d4c9"/>
+<text x="54" y="36.0" text-anchor="end" fill="currentColor" font-size="13">3,000</text>
+<text x="62.0" y="228" text-anchor="middle" fill="currentColor" font-size="13">0</text>
+<text x="228.0" y="228" text-anchor="middle" fill="currentColor" font-size="13">10,000</text>
+<text x="394.0" y="228" text-anchor="middle" fill="currentColor" font-size="13">20,000</text>
+<text x="560.0" y="228" text-anchor="middle" fill="currentColor" font-size="13">30,000</text>
+<text x="62" y="17" fill="currentColor" font-size="13">Average jam delay (source measure)</text>
+<text x="310" y="250" text-anchor="middle" fill="currentColor" font-size="13">GDP per capita (source measure)</text>
+<circle cx="246.7" cy="192.6" r="4.4" fill="#69947e"><title>Belo Horizonte · GDP per capita 11,124 · jam delay 263</title></circle>
+<circle cx="331.8" cy="202.0" r="4.4" fill="#69947e"><title>Brasilia · GDP per capita 16,251 · jam delay 102</title></circle>
+<circle cx="362.7" cy="174.5" r="4.4" fill="#69947e"><title>Buenos Aires · GDP per capita 18,117 · jam delay 571</title></circle>
+<circle cx="267.5" cy="197.2" r="4.4" fill="#69947e"><title>Curitiba · GDP per capita 12,381 · jam delay 183</title></circle>
+<circle cx="203.3" cy="203.1" r="4.4" fill="#69947e"><title>Fortaleza · GDP per capita 8,512 · jam delay 83</title></circle>
+<circle cx="496.5" cy="205.1" r="4.4" fill="#69947e"><title>Montevideo · GDP per capita 26,176 · jam delay 50</title></circle>
+<circle cx="257.9" cy="199.8" r="4.4" fill="#69947e"><title>Porto Alegre · GDP per capita 11,801 · jam delay 139</title></circle>
+<circle cx="214.5" cy="201.4" r="4.4" fill="#69947e"><title>Recife · GDP per capita 9,189 · jam delay 113</title></circle>
+<circle cx="283.6" cy="180.7" r="4.4" fill="#69947e"><title>Rio De Janeiro · GDP per capita 13,349 · jam delay 466</title></circle>
+<circle cx="209.7" cy="202.9" r="4.4" fill="#69947e"><title>Salvador · GDP per capita 8,899 · jam delay 86</title></circle>
+<circle cx="306.1" cy="106.6" r="4.4" fill="#69947e"><title>Sao Paulo · GDP per capita 14,703 · jam delay 1,729</title></circle>
+<circle cx="251.9" cy="141.0" r="4.4" fill="#1b624a"><title>Bogotá · GDP per capita 11,442 · jam delay 1,142</title></circle>
+<text x="241.9" y="129.0" text-anchor="end" fill="currentColor" font-size="13">Bogotá</text>
+<circle cx="285.6" cy="146.3" r="4.4" fill="#1b624a"><title>Lima · GDP per capita 13,472 · jam delay 1,052</title></circle>
+<text x="294.6" y="166.3" text-anchor="start" fill="currentColor" font-size="13">Lima</text>
+<circle cx="412.4" cy="41.8" r="4.4" fill="#1b624a"><title>Mexico City · GDP per capita 21,111 · jam delay 2,833</title></circle>
+<text x="421.4" y="47.8" text-anchor="start" fill="currentColor" font-size="13">Mexico City</text>
+<circle cx="99.8" cy="171.0" r="4.4" fill="#1b624a"><title>Santiago · GDP per capita 2,277 · jam delay 630</title></circle>
+<text x="108.8" y="162.0" text-anchor="start" fill="currentColor" font-size="13">Santiago</text>
+</svg>
+<p class="chart-note">The chart uses the cleaned notebook output. Santiago’s GDP figure is flagged for validation.</p></figure>
+<h4>Finding and next step</h4>
+<p>The plot shows no clear visual relationship in the 15-city sample. Lima and Bogotá warrant further study because they combine substantial delays with lower GDP per capita than some other large cities.</p>
+<details><summary>How to interpret the results</summary><p>This was exploratory work across seven countries. Validate units, coverage and outliers before using the analysis to inform investment decisions.</p></details>
+<a class="source" href="https://github.com/anfemuva/Portfolio/blob/main/urban-mobility.ipynb">Open the Python notebook <span aria-hidden="true">↗</span></a>
+</article>
+</section>
+
+<section id="experience" aria-labelledby="experience-title">
+<p class="kicker">Professional experience</p><h2 id="experience-title">Analytics in practice</h2>
+<p class="intro">Three examples of how I’ve used data in commercial operations and marketing. The summaries focus on the business question and the work involved.</p>
+<div class="cards">
+<article class="panel card"><p class="kicker">Commercial reporting</p><h3>Salesforce migration and dashboards</h3><p>I led the migration of sales information from Excel to Salesforce and developed dashboards to track commercial performance and sales targets.</p><p class="tags">Salesforce · CRM data · KPI reporting</p></article>
+<article class="panel card"><p class="kicker">Operations planning</p><h3>Excel demand forecasting</h3><p>I built an Excel-based demand forecast to support production and inventory planning.</p><p class="tags">Excel · Forecasting · Inventory planning</p></article>
+<article class="panel card"><p class="kicker">Marketing measurement</p><h3>Outreach performance and A/B testing</h3><p>I analyzed outreach performance and used A/B testing to evaluate messaging and inform conversion-focused changes.</p><p class="tags">Campaign analysis · Experimentation</p></article>
+</div>
+</section>
 <section id="dashboard" aria-labelledby="dashboard-title">
-<p class="kicker">01 / Interactive demonstration</p><h2 id="dashboard-title">Campaign engagement dashboard</h2>
+<p class="kicker">Interactive demonstration</p><h2 id="dashboard-title">Campaign engagement dashboard</h2>
 <p class="intro">A communications team wants to decide which channels to investigate before its next campaign. Compare click and action rates across two quarters, then use the definitions and source data to check how the metrics were calculated.</p>
 <div class="panel">
 <div class="panel-head"><h3>Channel performance</h3><span class="badge">Synthetic data · Portfolio demo</span></div>
@@ -102,24 +305,9 @@ with sqlite3.connect(":memory:") as db:
 </details>
 </div>
 </section>
-
-<section id="experience" aria-labelledby="experience-title">
-<p class="kicker">02 / Professional experience</p><h2 id="experience-title">Analytics in practice</h2>
-<p class="intro">Three examples of how I’ve used data in commercial operations and marketing. The summaries focus on the business question and the work involved.</p>
-<div class="cards">
-<article class="panel card"><p class="kicker">Commercial reporting</p><h3>Salesforce migration and dashboards</h3><p>I led the migration of sales information from Excel to Salesforce and developed dashboards to track commercial performance and sales targets.</p><p class="tags">Salesforce · CRM data · KPI reporting</p></article>
-<article class="panel card"><p class="kicker">Operations planning</p><h3>Excel demand forecasting</h3><p>I built an Excel-based demand forecast to support production and inventory planning.</p><p class="tags">Excel · Forecasting · Inventory planning</p></article>
-<article class="panel card"><p class="kicker">Marketing measurement</p><h3>Outreach performance and A/B testing</h3><p>I analyzed outreach performance and used A/B testing to evaluate messaging and inform conversion-focused changes.</p><p class="tags">Campaign analysis · Experimentation</p></article>
-</div>
-</section>
-<section id="about" class="about" aria-labelledby="about-title">
-<p class="kicker">03 / About</p><h2 id="about-title">Andres Murcia</h2>
-<p>I’m based in Toronto and have worked across marketing, business development, and commercial operations. My work has involved translating sales, demand, and campaign data into information teams can use to make decisions.</p>
-<p>Through TripleTen’s Data Analytics program, I’m developing my skills in SQL, Python, and data visualization. This portfolio connects that training to the business questions I’ve worked on.</p>
-<p><a href="https://github.com/anfemuva/Portfolio">View this portfolio on GitHub</a></p>
-</section>
-<footer class="footer"><span>Andres Murcia · Data analytics portfolio</span><a href="#top">Back to top ↑</a></footer>
+<footer class="footer"><a href="https://github.com/anfemuva/Portfolio">Site source on GitHub</a><a href="#top">Back to top ↑</a></footer>
 </main>
+</div>
 <script>
 "use strict";
 const records = [
