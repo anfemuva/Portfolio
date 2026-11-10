@@ -20,7 +20,7 @@
 html {scroll-behavior:smooth}
 body {margin:0;background:var(--paper);color:var(--ink);font:1rem/1.65 system-ui,sans-serif}
 a {color:var(--green);text-underline-offset:.22em}
-a:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible {outline:3px solid #a95422;outline-offset:4px}
+a:focus-visible,summary:focus-visible {outline:3px solid #a95422;outline-offset:4px}
 .skip {position:absolute;left:1rem;top:-6rem;background:white;padding:.6rem;z-index:3}
 .skip:focus {top:1rem}
 .layout {width:min(1120px,calc(100% - 3rem));margin:0 auto;display:grid;grid-template-columns:minmax(205px,265px) minmax(0,1fr);gap:clamp(2rem,6vw,5rem);align-items:start}
@@ -33,7 +33,7 @@ h2 {font-size:clamp(2.15rem,4.4vw,3.5rem)}
 h3 {font-size:clamp(1.55rem,3vw,2.25rem)}
 h4 {font-size:1rem}
 .kicker {font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.115em;color:var(--green);margin-bottom:.5rem}
-.location,.intro,.muted,.chart-note {color:var(--muted)}
+.location,.intro,.chart-note {color:var(--muted)}
 .profile-links {display:flex;gap:.95rem;flex-wrap:wrap;margin:1rem 0 1.55rem;font-size:.9rem;font-weight:700}
 nav {display:grid;gap:.46rem;border-top:1px solid var(--line);padding-top:1.1rem}
 nav a {text-decoration:none;width:fit-content;font-weight:650;font-size:.9rem}
@@ -46,7 +46,7 @@ section {margin-bottom:3.65rem}
 .about-intro {border-bottom:1px solid var(--line);padding-bottom:2.2rem}
 .about-intro h2 {max-width:16ch}
 .tools {display:flex;flex-wrap:wrap;gap:.36rem;margin:1rem 0;padding:0;list-style:none}
-.tools li,.badge {background:#e6eee7;color:var(--green);border-radius:6px;padding:.18rem .58rem;font-size:.78rem;font-weight:700}
+.tools li {background:#e6eee7;color:var(--green);border-radius:6px;padding:.18rem .58rem;font-size:.78rem;font-weight:700}
 .project,.panel {background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.15rem,3.5vw,2rem)}
 .project {margin-top:1.3rem}
 .question {font-weight:680}
@@ -57,8 +57,8 @@ figcaption {font-size:.9rem;font-weight:760;margin-bottom:.65rem}
 .stack span+span {background:#d8e6dc;color:#244639}
 .legend {display:grid;grid-template-columns:55.59fr 44.41fr;text-align:center;gap:.4rem;color:var(--muted);font-size:.78rem}
 .bars {display:grid;gap:.5rem}
-.plot-row,.row {display:grid;align-items:center;grid-template-columns:8.3rem minmax(0,1fr) 3.65rem;gap:.55rem;font-size:.83rem}
-.plot-row strong,.row strong {text-align:right;font-variant-numeric:tabular-nums}
+.plot-row {display:grid;align-items:center;grid-template-columns:8.3rem minmax(0,1fr) 3.65rem;gap:.55rem;font-size:.83rem}
+.plot-row strong {text-align:right;font-variant-numeric:tabular-nums}
 .track {height:12px;background:#dfeae2;border-radius:4px;overflow:hidden}
 .bar {display:block;height:100%;background:#34765b;border-radius:4px}
 .chart-note {font-size:.82rem;margin:.65rem 0 0}
@@ -71,23 +71,6 @@ details p {margin:.6rem 0}
 .card h3 {font-size:1.25rem}
 .card p:last-child {margin-bottom:0}
 .tags {color:var(--green);font-size:.83rem;font-weight:650}
-.panel-head {display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
-.panel-head h3 {font-size:1.25rem;margin:0}
-.filters {display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem}
-.filters label {display:grid;gap:.2rem;font-size:.8rem;font-weight:700}
-select,button {font:inherit;color:var(--ink);background:white;border:1px solid #84998b;border-radius:7px;padding:.4rem .55rem}
-button {cursor:pointer}
-.metrics {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem}
-.metric {background:#edf4ee;border-radius:8px;padding:.5rem .65rem}
-.metric span,.metric strong {display:block}
-.metric span {font-size:.76rem;font-weight:700}
-.metric strong {font-size:clamp(1.12rem,3vw,1.55rem)}
-.chart,.insight {margin-block:1rem}
-.row {grid-template-columns:5rem minmax(0,1fr) 3.25rem}
-.insight {border-left:3px solid #70a283;padding-left:.8rem}
-.insight p {margin:0}
-.muted {font-size:.86rem}
-.code {overflow:auto;background:#1a3027;color:#f5fbf6;border-radius:8px;padding:1rem;font:.82rem/1.55 ui-monospace,Consolas,monospace}
 .footer {display:flex;justify-content:space-between;gap:.75rem;flex-wrap:wrap;border-top:1px solid var(--line);padding:1rem 0 2rem;color:var(--muted);font-size:.85rem}
 @media(max-width:780px) {
   .layout {display:block;width:min(680px,calc(100% - 2rem))}
@@ -97,7 +80,6 @@ button {cursor:pointer}
 }
 @media(max-width:390px) {
   .plot-row {grid-template-columns:6.35rem minmax(0,1fr) 3.3rem;gap:.35rem}
-  .metric {padding:.4rem}
 }
 @media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}}
 
@@ -117,7 +99,6 @@ button {cursor:pointer}
 <a href="#projects">Selected projects</a>
 <ul><li><a href="#walmart">Walmart sales</a></li><li><a href="#financial">Financial performance</a></li><li><a href="#mercadolibre">MercadoLibre funnel</a></li><li><a href="#mobility">Urban mobility</a></li></ul>
 <a href="#experience">Professional experience</a>
-<a href="#dashboard">Interactive demo</a>
 </nav>
 </header>
 <main id="main">
@@ -230,165 +211,8 @@ button {cursor:pointer}
 <article class="panel card"><p class="kicker">Marketing measurement</p><h3>Outreach performance and A/B testing</h3><p>I analyzed outreach performance and used A/B testing to evaluate messaging and inform conversion-focused changes.</p><p class="tags">Campaign analysis · Experimentation</p></article>
 </div>
 </section>
-<section id="dashboard" aria-labelledby="dashboard-title">
-<p class="kicker">Interactive demonstration</p><h2 id="dashboard-title">Campaign engagement dashboard</h2>
-<p class="intro">A communications team wants to decide which channels to investigate before its next campaign. Compare click and action rates across two quarters, then use the definitions and source data to check how the metrics were calculated.</p>
-<div class="panel">
-<div class="panel-head"><h3>Channel performance</h3><span class="badge">Synthetic data · Portfolio demo</span></div>
-<noscript><p>Enable JavaScript to use the filters and download the sample data.</p></noscript>
-<div class="filters">
-<label>Period<select id="period"><option value="Q2">Apr–Jun</option><option value="Q1">Jan–Mar</option><option value="all">Jan–Jun</option></select></label>
-<label>Channel<select id="channel"><option value="all">All channels</option><option>Email</option><option>Intranet</option><option>Teams</option></select></label>
-</div>
-<div class="metrics" aria-live="polite" aria-atomic="true">
-<div class="metric"><span>Delivered</span><strong id="delivered">—</strong></div>
-<div class="metric"><span>Click rate</span><strong id="click-rate">—</strong></div>
-<div class="metric"><span>Action rate</span><strong id="action-rate">—</strong></div>
-</div>
-<div class="chart"><h4>Click rate by channel <span class="muted">(0–25% scale)</span></h4><div class="bars" id="bars"></div></div>
-<div class="insight"><strong>What to look at next</strong><p id="insight" aria-live="polite"></p></div>
-<p class="muted">This AI-assisted demo uses fictional communications activity. Channel audiences, exposure and message mix may differ. The comparisons are descriptive.</p>
-<details><summary>Metric definitions and sample data</summary>
-<p>Each row represents a month and channel. <strong>Delivered</strong> counts exposures. <strong>Click rate</strong> is clicked exposures ÷ delivered exposures. <strong>Action rate</strong> is completed actions ÷ delivered exposures. Each exposure contributes at most one click and one action, and every action follows a click. Rates use summed counts within each selection. Recipients may appear in multiple exposures.</p>
-<button id="download" type="button">Download sample CSV</button>
-</details>
-<details><summary>Python validation and SQL aggregation</summary>
-<p>Save the sample CSV as <code>engagement.csv</code>. This Python script checks duplicate month/channel pairs and impossible counts, then loads the rows into SQLite and runs the KPI query.</p>
-<pre class="code"><code>import csv
-import sqlite3
-
-with open("engagement.csv", newline="", encoding="utf-8") as file:
-    rows = list(csv.DictReader(file))
-
-records = []
-seen = set()
-for row in rows:
-    key = (row["month"], row["channel"])
-    if key in seen:
-        raise ValueError(f"Duplicate month and channel: {key}")
-    seen.add(key)
-
-    delivered = int(row["delivered"])
-    clicked = int(row["clicked"])
-    actions = int(row["actions"])
-    if not 0 &lt;= actions &lt;= clicked &lt;= delivered or delivered == 0:
-        raise ValueError(f"Invalid engagement counts: {key}")
-    records.append((*key, row["quarter"], delivered, clicked, actions))
-
-query = """
-SELECT
-    channel,
-    SUM(delivered) AS delivered,
-    ROUND(100.0 * SUM(clicked) / NULLIF(SUM(delivered), 0), 2) AS click_rate,
-    ROUND(100.0 * SUM(actions) / NULLIF(SUM(delivered), 0), 2) AS action_rate
-FROM engagement
-WHERE quarter = ?
-GROUP BY channel
-ORDER BY click_rate DESC;
-"""
-
-with sqlite3.connect(":memory:") as db:
-    db.execute("""
-        CREATE TABLE engagement (
-            month TEXT,
-            channel TEXT,
-            quarter TEXT,
-            delivered INTEGER,
-            clicked INTEGER,
-            actions INTEGER,
-            PRIMARY KEY (month, channel)
-        );
-    """)
-    db.executemany("INSERT INTO engagement VALUES (?, ?, ?, ?, ?, ?)", records)
-    for result in db.execute(query, ("Q2",)):
-        print(result)</code></pre>
-</details>
-</div>
-</section>
 <footer class="footer"><a href="https://github.com/anfemuva/Portfolio">Site source on GitHub</a><a href="#top">Back to top ↑</a></footer>
 </main>
 </div>
-<script>
-"use strict";
-const records = [
-  ["Jan","Email","Q1",2300,276,74], ["Jan","Intranet","Q1",1340,107,31], ["Jan","Teams","Q1",910,146,32],
-  ["Feb","Email","Q1",2450,306,83], ["Feb","Intranet","Q1",1440,125,39], ["Feb","Teams","Q1",980,167,40],
-  ["Mar","Email","Q1",2500,320,89], ["Mar","Intranet","Q1",1560,142,40], ["Mar","Teams","Q1",1080,183,46],
-  ["Apr","Email","Q2",2600,338,124], ["Apr","Intranet","Q2",1630,155,49], ["Apr","Teams","Q2",1140,201,51],
-  ["May","Email","Q2",2760,378,144], ["May","Intranet","Q2",1710,175,56], ["May","Teams","Q2",1230,223,58],
-  ["Jun","Email","Q2",2880,410,164], ["Jun","Intranet","Q2",1830,194,66], ["Jun","Teams","Q2",1320,245,68]
-].map(([month,channel,quarter,delivered,clicked,actions]) => ({month,channel,quarter,delivered,clicked,actions}));
-const byId = (id) => document.getElementById(id);
-const integer = new Intl.NumberFormat("en-CA");
-const percent = new Intl.NumberFormat("en-CA", {style:"percent",minimumFractionDigits:1,maximumFractionDigits:1});
-const period = byId("period");
-const channel = byId("channel");
-const channelNames = ["Email","Intranet","Teams"];
-
-function summarize(rows) {
-  const delivered = rows.reduce((total, row) => total + row.delivered, 0);
-  const clicked = rows.reduce((total, row) => total + row.clicked, 0);
-  const actions = rows.reduce((total, row) => total + row.actions, 0);
-  return {delivered, clickRate:clicked/delivered, actionRate:actions/delivered};
-}
-
-function draw() {
-  const selected = records.filter((row) =>
-    (period.value === "all" || row.quarter === period.value) &&
-    (channel.value === "all" || row.channel === channel.value));
-  const total = summarize(selected);
-  byId("delivered").textContent = integer.format(total.delivered);
-  byId("click-rate").textContent = percent.format(total.clickRate);
-  byId("action-rate").textContent = percent.format(total.actionRate);
-
-  const groups = channelNames.filter((name) => selected.some((row) => row.channel === name))
-    .map((name) => ({name, ...summarize(selected.filter((row) => row.channel === name))}))
-    .sort((a, b) => b.clickRate - a.clickRate);
-  const bars = byId("bars");
-  bars.replaceChildren();
-  for (const group of groups) {
-    const row = document.createElement("div");
-    row.className = "row";
-    const label = document.createElement("span");
-    label.textContent = group.name;
-    const track = document.createElement("div");
-    track.className = "track";
-    track.setAttribute("aria-hidden", "true");
-    const bar = document.createElement("span");
-    bar.className = "bar";
-    bar.style.width = (group.clickRate / 0.25 * 100) + "%";
-    const value = document.createElement("strong");
-    value.textContent = percent.format(group.clickRate);
-    track.append(bar);
-    row.append(label, track, value);
-    bars.append(row);
-  }
-
-  const bestClick = groups[0];
-  const bestAction = [...groups].sort((a, b) => b.actionRate - a.actionRate)[0];
-  byId("insight").textContent = groups.length > 1
-    ? bestClick.name + " leads on click rate (" + percent.format(bestClick.clickRate) + "). " +
-      bestAction.name + " leads on action rate (" + percent.format(bestAction.actionRate) +
-      "). Before shifting the channel mix, compare campaigns with similar messages and audiences."
-    : bestClick.name + " has a " + percent.format(total.clickRate) + " click rate and a " +
-      percent.format(total.actionRate) + " action rate. Switch to all channels to compare where people click and where they complete the requested action.";
-}
-
-function download() {
-  const columns = ["month","channel","quarter","delivered","clicked","actions"];
-  const csv = [columns.join(","), ...records.map((row) => columns.map((column) => row[column]).join(","))].join("\n") + "\n";
-  const url = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = "engagement.csv";
-  link.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-}
-
-period.addEventListener("change", draw);
-channel.addEventListener("change", draw);
-byId("download").addEventListener("click", download);
-draw();
-</script>
 </body>
 </html>
