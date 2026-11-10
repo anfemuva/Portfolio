@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Andres Murcia's data analytics portfolio. Commercial reporting, marketing measurement, Salesforce, Excel forecasting, and SQL and Python training.">
+<title>Andres Murcia | Data Analytics Portfolio</title>
+<style>
+:root{color-scheme:light;--ink:#182720;--muted:#4f6157;--paper:#f6f5ef;--line:#d5dcd2;--green:#164d39;--lime:#daf49c;--white:#fff;--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}a{color:inherit}a:hover{text-decoration-thickness:2px}a:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #bb672c;outline-offset:4px}
+.shell{width:min(1100px,calc(100% - 3rem));margin-inline:auto}.eyebrow,.kicker{font-size:.74rem;font-weight:750;letter-spacing:.13em;text-transform:uppercase}.skip{position:absolute;left:1rem;top:-5rem;background:white;padding:.5rem;z-index:2}.skip:focus{top:1rem}
+header .shell{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:1.25rem}.brand{text-decoration:none;font-weight:800}.brand span{display:inline-grid;place-items:center;background:var(--green);color:white;border-radius:8px;width:2.3rem;height:2.3rem;font-size:.72rem;margin-right:.55rem}nav{display:flex;flex-wrap:wrap;gap:.4rem 1.35rem}nav a{font-size:.9rem;text-underline-offset:4px}
+.hero{background:#173b2d;color:white;border-radius:28px;padding:clamp(2rem,6vw,5.25rem);display:grid;grid-template-columns:minmax(0,1fr) minmax(205px,.4fr);align-items:end;gap:2rem}.hero .eyebrow{color:var(--lime)}h1,h2,h3,p{margin-top:0}h1,h2{font-family:Georgia,serif;font-weight:500;line-height:1.05;letter-spacing:-.035em}h1{font-size:clamp(2.75rem,6vw,5.35rem);margin:.8rem 0 1.25rem;max-width:13ch}h2{font-size:clamp(2.05rem,4.3vw,3.4rem);margin:.45rem 0 1rem}h3{line-height:1.2}.hero p{max-width:57ch;color:#e0ede5}.button{display:inline-block;padding:.7rem 1rem;border-radius:8px;background:var(--lime);color:#203424;font-size:.92rem;font-weight:750;text-decoration:none}.button:hover{background:#ecffcc}.hero aside{border-top:1px solid #628075;padding-top:1rem}.hero aside ul{list-style:none;padding:0;margin:0}.hero aside li{border-bottom:1px solid #628075;padding:.55rem 0;color:#f2f7f4;font-size:.93rem}
+section{margin-block:clamp(3rem,7vw,5.5rem);scroll-margin-top:1rem}.kicker{color:var(--green);margin:0}.intro{max-width:71ch;color:var(--muted)}.panel{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.15rem,3.5vw,2rem)}.panel-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;margin-bottom:1.1rem}.panel-head h3{margin:0;font-size:1.3rem}.badge{background:#ecf2e7;color:var(--green);border-radius:20px;padding:.3rem .7rem;font-size:.72rem;font-weight:800}.filters{display:flex;flex-wrap:wrap;gap:.85rem;margin-bottom:1rem}.filters label{display:grid;gap:.2rem;font-size:.8rem;font-weight:700}.filters select{font:inherit;font-size:.95rem;background:#fff;color:var(--ink);border:1px solid #819486;border-radius:7px;padding:.4rem .65rem;min-width:145px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}.metric{background:#f1f5ed;border-radius:12px;padding:.85rem 1rem}.metric span{display:block;font-size:.79rem;font-weight:700;color:#3d5547}.metric strong{font-size:clamp(1.4rem,3.3vw,2.15rem);font-variant-numeric:tabular-nums}.chart{margin-block:1.4rem}.chart h4{margin:0 0 .6rem}.bars{display:grid;gap:.6rem}.row{display:grid;grid-template-columns:5.5rem minmax(0,1fr) 3.65rem;gap:.6rem;align-items:center;font-size:.88rem}.track{height:16px;border-radius:4px;background:#edf2ea;overflow:hidden}.bar{display:block;height:100%;background:#34765b;border-radius:4px}.row strong{text-align:right;font-variant-numeric:tabular-nums}.muted{color:var(--muted);font-size:.88rem}.insight{border-left:3px solid #60945f;padding-left:1rem;margin-bottom:1.25rem}.insight p{margin:0}.insight strong{display:block;margin-bottom:.3rem}
+details{border-top:1px solid var(--line);padding:.85rem 0}summary{cursor:pointer;font-weight:750}details p{margin:.75rem 0}.code{overflow:auto;background:#1a3027;color:#f5fbf6;border-radius:10px;padding:1rem;font: .84rem/1.55 ui-monospace,Consolas,monospace}button{background:#fff;color:var(--green);border:1px solid #819486;border-radius:7px;padding:.5rem .7rem;font:inherit;font-weight:700;cursor:pointer}button:hover{background:#ecf2e7}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.card{border-top:3px solid #527a64}.card h3{font-size:1.3rem;margin:.65rem 0}.card p:last-child{margin-bottom:0}.tags{color:var(--green);font-size:.82rem;font-weight:750}.about{border-top:1px solid var(--line);padding-top:2rem}.about p{max-width:70ch}.footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1rem 0 2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.87rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.cards{grid-template-columns:1fr}}@media(max-width:460px){.shell{width:calc(100% - 1.5rem)}header .shell{align-items:flex-start;flex-direction:column}.hero{padding:1.4rem}.metric{padding:.5rem}.metric span{font-size:.72rem}.row{grid-template-columns:4.5rem minmax(0,1fr) 3.35rem;gap:.35rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="shell"><a class="brand" href="#top"><span aria-hidden="true">AM</span>Andres Murcia</a><nav aria-label="Main navigation"><a href="#dashboard">Dashboard</a><a href="#experience">Experience</a><a href="#about">About</a></nav></div></header>
+<main id="main" class="shell">
+<div class="hero">
+<div><p class="eyebrow">Data analytics portfolio · Toronto, ON</p><h1>Analytics for commercial decisions</h1><p>I bring a background in commercial operations and marketing to questions about sales performance, demand, and outreach. I’m building on that experience with SQL and Python through TripleTen.</p><a class="button" href="#dashboard">Explore the dashboard ↓</a></div>
+<aside aria-label="Focus areas"><p class="eyebrow">Focus areas</p><ul><li>KPI reporting</li><li>Campaign measurement</li><li>Demand forecasting</li></ul></aside>
+</div>
+
+<section id="dashboard" aria-labelledby="dashboard-title">
+<p class="kicker">01 / Interactive demonstration</p><h2 id="dashboard-title">Campaign engagement dashboard</h2>
+<p class="intro">A communications team wants to decide which channels to investigate before its next campaign. Compare click and action rates across two quarters, then use the definitions and source data to check how the metrics were calculated.</p>
+<div class="panel">
+<div class="panel-head"><h3>Channel performance</h3><span class="badge">Synthetic data · Portfolio demo</span></div>
+<noscript><p>Enable JavaScript to use the filters and download the sample data.</p></noscript>
+<div class="filters">
+<label>Period<select id="period"><option value="Q2">Apr–Jun</option><option value="Q1">Jan–Mar</option><option value="all">Jan–Jun</option></select></label>
+<label>Channel<select id="channel"><option value="all">All channels</option><option>Email</option><option>Intranet</option><option>Teams</option></select></label>
+</div>
+<div class="metrics" aria-live="polite" aria-atomic="true">
+<div class="metric"><span>Delivered</span><strong id="delivered">—</strong></div>
+<div class="metric"><span>Click rate</span><strong id="click-rate">—</strong></div>
+<div class="metric"><span>Action rate</span><strong id="action-rate">—</strong></div>
+</div>
+<div class="chart"><h4>Click rate by channel <span class="muted">(0–25% scale)</span></h4><div class="bars" id="bars"></div></div>
+<div class="insight"><strong>What to look at next</strong><p id="insight" aria-live="polite"></p></div>
+<p class="muted">This AI-assisted demo uses fictional communications activity. Channel audiences, exposure and message mix may differ. The comparisons are descriptive.</p>
+<details><summary>Metric definitions and sample data</summary>
+<p>Each row represents a month and channel. <strong>Delivered</strong> counts exposures. <strong>Click rate</strong> is clicked exposures ÷ delivered exposures. <strong>Action rate</strong> is completed actions ÷ delivered exposures. Each exposure contributes at most one click and one action, and every action follows a click. Rates use summed counts within each selection. Recipients may appear in multiple exposures.</p>
+<button id="download" type="button">Download sample CSV</button>
+</details>
+<details><summary>Python validation and SQL aggregation</summary>
+<p>Save the sample CSV as <code>engagement.csv</code>. This Python script checks duplicate month/channel pairs and impossible counts, then loads the rows into SQLite and runs the KPI query.</p>
+<pre class="code"><code>import csv
+import sqlite3
+
+with open("engagement.csv", newline="", encoding="utf-8") as file:
+    rows = list(csv.DictReader(file))
+
+records = []
+seen = set()
+for row in rows:
+    key = (row["month"], row["channel"])
+    if key in seen:
+        raise ValueError(f"Duplicate month and channel: {key}")
+    seen.add(key)
+
+    delivered = int(row["delivered"])
+    clicked = int(row["clicked"])
+    actions = int(row["actions"])
+    if not 0 &lt;= actions &lt;= clicked &lt;= delivered or delivered == 0:
+        raise ValueError(f"Invalid engagement counts: {key}")
+    records.append((*key, row["quarter"], delivered, clicked, actions))
+
+query = """
+SELECT
+    channel,
+    SUM(delivered) AS delivered,
+    ROUND(100.0 * SUM(clicked) / NULLIF(SUM(delivered), 0), 2) AS click_rate,
+    ROUND(100.0 * SUM(actions) / NULLIF(SUM(delivered), 0), 2) AS action_rate
+FROM engagement
+WHERE quarter = ?
+GROUP BY channel
+ORDER BY click_rate DESC;
+"""
+
+with sqlite3.connect(":memory:") as db:
+    db.execute("""
+        CREATE TABLE engagement (
+            month TEXT,
+            channel TEXT,
+            quarter TEXT,
+            delivered INTEGER,
+            clicked INTEGER,
+            actions INTEGER,
+            PRIMARY KEY (month, channel)
+        );
+    """)
+    db.executemany("INSERT INTO engagement VALUES (?, ?, ?, ?, ?, ?)", records)
+    for result in db.execute(query, ("Q2",)):
+        print(result)</code></pre>
+</details>
+</div>
+</section>
+
+<section id="experience" aria-labelledby="experience-title">
+<p class="kicker">02 / Professional experience</p><h2 id="experience-title">Analytics in practice</h2>
+<p class="intro">Three examples of how I’ve used data in commercial operations and marketing. The summaries focus on the business question and the work involved.</p>
+<div class="cards">
+<article class="panel card"><p class="kicker">Commercial reporting</p><h3>Salesforce migration and dashboards</h3><p>I led the migration of sales information from Excel to Salesforce and developed dashboards to track commercial performance and sales targets.</p><p class="tags">Salesforce · CRM data · KPI reporting</p></article>
+<article class="panel card"><p class="kicker">Operations planning</p><h3>Excel demand forecasting</h3><p>I built an Excel-based demand forecast to support production and inventory planning.</p><p class="tags">Excel · Forecasting · Inventory planning</p></article>
+<article class="panel card"><p class="kicker">Marketing measurement</p><h3>Outreach performance and A/B testing</h3><p>I analyzed outreach performance and used A/B testing to evaluate messaging and inform conversion-focused changes.</p><p class="tags">Campaign analysis · Experimentation</p></article>
+</div>
+</section>
+<section id="about" class="about" aria-labelledby="about-title">
+<p class="kicker">03 / About</p><h2 id="about-title">Andres Murcia</h2>
+<p>I’m based in Toronto and have worked across marketing, business development, and commercial operations. My work has involved translating sales, demand, and campaign data into information teams can use to make decisions.</p>
+<p>Through TripleTen’s Data Analytics program, I’m developing my skills in SQL, Python, and data visualization. This portfolio connects that training to the business questions I’ve worked on.</p>
+<p><a href="https://github.com/anfemuva/Portfolio">View this portfolio on GitHub</a></p>
+</section>
+<footer class="footer"><span>Andres Murcia · Data analytics portfolio</span><a href="#top">Back to top ↑</a></footer>
+</main>
+<script>
+"use strict";
+const records = [
+  ["Jan","Email","Q1",2300,276,74], ["Jan","Intranet","Q1",1340,107,31], ["Jan","Teams","Q1",910,146,32],
+  ["Feb","Email","Q1",2450,306,83], ["Feb","Intranet","Q1",1440,125,39], ["Feb","Teams","Q1",980,167,40],
+  ["Mar","Email","Q1",2500,320,89], ["Mar","Intranet","Q1",1560,142,40], ["Mar","Teams","Q1",1080,183,46],
+  ["Apr","Email","Q2",2600,338,124], ["Apr","Intranet","Q2",1630,155,49], ["Apr","Teams","Q2",1140,201,51],
+  ["May","Email","Q2",2760,378,144], ["May","Intranet","Q2",1710,175,56], ["May","Teams","Q2",1230,223,58],
+  ["Jun","Email","Q2",2880,410,164], ["Jun","Intranet","Q2",1830,194,66], ["Jun","Teams","Q2",1320,245,68]
+].map(([month,channel,quarter,delivered,clicked,actions]) => ({month,channel,quarter,delivered,clicked,actions}));
+const byId = (id) => document.getElementById(id);
+const integer = new Intl.NumberFormat("en-CA");
+const percent = new Intl.NumberFormat("en-CA", {style:"percent",minimumFractionDigits:1,maximumFractionDigits:1});
+const period = byId("period");
+const channel = byId("channel");
+const channelNames = ["Email","Intranet","Teams"];
+
+function summarize(rows) {
+  const delivered = rows.reduce((total, row) => total + row.delivered, 0);
+  const clicked = rows.reduce((total, row) => total + row.clicked, 0);
+  const actions = rows.reduce((total, row) => total + row.actions, 0);
+  return {delivered, clickRate:clicked/delivered, actionRate:actions/delivered};
+}
+
+function draw() {
+  const selected = records.filter((row) =>
+    (period.value === "all" || row.quarter === period.value) &&
+    (channel.value === "all" || row.channel === channel.value));
+  const total = summarize(selected);
+  byId("delivered").textContent = integer.format(total.delivered);
+  byId("click-rate").textContent = percent.format(total.clickRate);
+  byId("action-rate").textContent = percent.format(total.actionRate);
+
+  const groups = channelNames.filter((name) => selected.some((row) => row.channel === name))
+    .map((name) => ({name, ...summarize(selected.filter((row) => row.channel === name))}))
+    .sort((a, b) => b.clickRate - a.clickRate);
+  const bars = byId("bars");
+  bars.replaceChildren();
+  for (const group of groups) {
+    const row = document.createElement("div");
+    row.className = "row";
+    const label = document.createElement("span");
+    label.textContent = group.name;
+    const track = document.createElement("div");
+    track.className = "track";
+    track.setAttribute("aria-hidden", "true");
+    const bar = document.createElement("span");
+    bar.className = "bar";
+    bar.style.width = (group.clickRate / 0.25 * 100) + "%";
+    const value = document.createElement("strong");
+    value.textContent = percent.format(group.clickRate);
+    track.append(bar);
+    row.append(label, track, value);
+    bars.append(row);
+  }
+
+  const bestClick = groups[0];
+  const bestAction = [...groups].sort((a, b) => b.actionRate - a.actionRate)[0];
+  byId("insight").textContent = groups.length > 1
+    ? bestClick.name + " leads on click rate (" + percent.format(bestClick.clickRate) + "). " +
+      bestAction.name + " leads on action rate (" + percent.format(bestAction.actionRate) +
+      "). Before shifting the channel mix, compare campaigns with similar messages and audiences."
+    : bestClick.name + " has a " + percent.format(total.clickRate) + " click rate and a " +
+      percent.format(total.actionRate) + " action rate. Switch to all channels to compare where people click and where they complete the requested action.";
+}
+
+function download() {
+  const columns = ["month","channel","quarter","delivered","clicked","actions"];
+  const csv = [columns.join(","), ...records.map((row) => columns.map((column) => row[column]).join(","))].join("\n") + "\n";
+  const url = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "engagement.csv";
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+period.addEventListener("change", draw);
+channel.addEventListener("change", draw);
+byId("download").addEventListener("click", download);
+draw();
+</script>
+</body>
+</html>
